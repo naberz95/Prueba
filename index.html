@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Documentación</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header con los logos de las empresas -->
+    <header class="header-logos">
+        <h1>Sistema De Gestión de Documentación</h1>
+        <img src="/img/images.png" alt="Logo Arus">
+        <img src="/img/logo-de-600-x-400_Riopaila-Castilla-768x512.png" alt="Logo Riopaila">
+    </header>
+
+    <!-- Contenido principal -->
+    <div class="container mt-5">
+        <div class="row justify-content-center mt-4">
+            <div class="col-md-8">
+                <form id="docForm">
+                    <div class="mb-3">
+                        <label for="categoria" class="form-label">Categoría</label>
+                        <select id="categoria" class="form-select" aria-label="Selecciona una categoría">
+                            <option selected>Selecciona una categoría</option>
+                            <option value="GENERAL">GENERAL</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label for="subcategoria" class="form-label">Subcategoría</label>
+                        <select id="subcategoria" class="form-select" aria-label="Selecciona una subcategoría" disabled>
+                            <option selected>Selecciona una subcategoría</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label for="solicitud" class="form-label">Solicitud</label>
+                        <select id="solicitud" class="form-select" aria-label="Selecciona una solicitud" disabled>
+                            <option selected>Selecciona una solicitud</option>
+                        </select>
+                    </div>
+                    <button type="button" id="copyBtn" class="btn btn-primary">Copiar Documentación</button>
+                </form>
+            </div>
+        </div>
+        <div class="row justify-content-center mt-4">
+            <div class="col-md-8">
+                <!-- Contenedor para mostrar la documentación -->
+                <div id="documentacionContainer" class="card p-3 shadow-sm">
+                    <h5 id="documentacionTitulo" class="card-title"></h5>
+                    <pre id="documentacionTexto" class="card-text"></pre>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer siempre al final -->
+    <footer>
+        Creado por Nolberto Gomez, Correo: mesa_ayuda@riopaila-castilla.com, extensión 1918
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
